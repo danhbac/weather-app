@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import moment from "moment";
-import Main from "./header";
 import Footer from "./footer";
+import Header from "./header";
 
 interface IFiveDays {
   location: {
@@ -44,7 +44,7 @@ const Days = () => {
     try {
       const getData = async () => {
         const response = await axios.get(
-          "https://api.weatherapi.com/v1/forecast.json?key=c9a0ca46550648b29ce125849232709&q=Danang&days=5&aqi=no&alerts=no&lang=vi"
+          "https://api.weatherapi.com/v1/forecast.json?key=c9a0ca46550648b29ce125849232709&q=Đà Nẵng&days=5&aqi=no&alerts=no&lang=vi"
         );
 
         setFiveDays(response.data);
@@ -62,7 +62,7 @@ const Days = () => {
       
       <div className="screen bg-[url('/img/background.jpg')] border-solid border-8 relative border-black rounded-3xl w-[360px] h-[680px] overflow-y-auto text-white ">
         <main>
-          <Main/>
+          <Header/>
         </main>
         <div className="p-4">
           <div className="bg-slate-800 bg-opacity-60 mt-4 p-2 rounded-xl">
