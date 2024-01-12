@@ -15,8 +15,8 @@ function App() {
          <Routes>
          
             {/* / Trang chủ */}
-            <Route  index element={<Weather />} />
-            <Route path="/days" element={<Days />} />
+            <Route path='/weather-app' element={<Weather />} />
+            <Route path="/weather-app/days" element={<Days />} />
            
          </Routes>
         
